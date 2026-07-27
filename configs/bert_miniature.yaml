@@ -1,0 +1,42 @@
+seed: 42
+
+# Turc et al. (2019) BERT Miniatures grid: L in {2,4,6,8,10,12}, H in {128,256,512,768}, A=H/64 (A is the number of heads)
+# Use --model-id for quick single-model checks
+model_ids:
+  - google/bert_uncased_L-2_H-128_A-2
+  - google/bert_uncased_L-2_H-256_A-4
+  - google/bert_uncased_L-2_H-512_A-8
+  - google/bert_uncased_L-2_H-768_A-12
+  - google/bert_uncased_L-4_H-128_A-2
+  - google/bert_uncased_L-4_H-256_A-4
+  - google/bert_uncased_L-4_H-512_A-8
+  - google/bert_uncased_L-4_H-768_A-12
+  - google/bert_uncased_L-6_H-128_A-2
+  - google/bert_uncased_L-6_H-256_A-4
+  - google/bert_uncased_L-6_H-512_A-8
+  - google/bert_uncased_L-6_H-768_A-12
+  - google/bert_uncased_L-8_H-128_A-2
+  - google/bert_uncased_L-8_H-256_A-4
+  - google/bert_uncased_L-8_H-512_A-8
+  - google/bert_uncased_L-8_H-768_A-12
+  - google/bert_uncased_L-10_H-128_A-2
+  - google/bert_uncased_L-10_H-256_A-4
+  - google/bert_uncased_L-10_H-512_A-8
+  - google/bert_uncased_L-10_H-768_A-12
+  - google/bert_uncased_L-12_H-128_A-2
+  - google/bert_uncased_L-12_H-256_A-4
+  - google/bert_uncased_L-12_H-512_A-8
+  - google/bert_uncased_L-12_H-768_A-12
+primary_model_id: google/bert_uncased_L-12_H-768_A-12
+
+output_dir: outputs
+svd_device: cpu
+svd_dtype: float64
+rank_tol: 1.0e-10
+
+bound:
+  L_phi: 1.13 # Upper bound on the GELU Lipschitz constant
+
+scaling:
+  widths: [128, 256, 512, 768]
+  depths: [2, 4, 6, 8, 10, 12]

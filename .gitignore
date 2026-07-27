@@ -1,0 +1,16 @@
+# macOS
+**/.DS_Store
+__MACOSX/
+
+# Python cache/build artifacts
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Generated experiment outputs
+outputs/matrices/*
+outputs/tables/*
+outputs/figures/*
+!outputs/matrices/.gitkeep
+!outputs/tables/.gitkeep
+!outputs/figures/.gitkeep
