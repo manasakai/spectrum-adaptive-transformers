@@ -1,8 +1,8 @@
 # BERT Miniatures spectrum experiments
 
-This repository runs the experiments for spectrum-adaptive generalization bounds on the publicly released BERT Miniatures checkpoints of Turc et al. (2019).
+This repository runs the experiments for spectrum-adaptive generalization bounds in the paper “Spectrum-Adaptive Generalization Bounds for Trained Deep Transformers”, using the BERT Miniatures checkpoints of [Turc et al. (2019)](https://arxiv.org/abs/1908.08962). Please refer to the paper for a detailed explanation of the experiments and results.
 
-**Reference:** Turc et al. (2019). Well-Read Students Learn Better: On the Importance of Pre-training Compact Models. *arXiv preprint arXiv:1908.08962.*.
+**Reference:** Mana Sakai and Masaaki Imaizumi. (2026). Spectrum-Adaptive Generalization Bounds for Trained Deep Transformers. https://arxiv.org/abs/2605.07297.
 
 The theoretical model in the paper is single-head, while BERT is multi-head.  The scripts therefore do **not** treat the full QK or V matrices in a layer as one object.  Instead, for every layer `ell` and head `h`, they extract
 
